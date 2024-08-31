@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>你的一路向北来了</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <h1>
+      到家了
+      <br>
+      也能听一路向北！
+    </h1>
+    <div class="card">
+      <div class="imgBox">
+        <img src="./1.jpg" alt="" />
+        <!-- <img src="./2.jpg" alt="" /> -->
+      </div>
+      <div class="details">
+        <div class="content">
+          <div id="app" style="display: none;"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+  <script>
+    let player = new cplayer({
+      element: document.getElementById('app'),
+      playlist: [
+        {
+          src: './3.mp3',
+          poster: './一路向北.jpg',
+          name: '一路向北',
+          artist: '周杰伦',
+          lyric: '歌词(bushi)',
+          sublyric: '副歌词(懒得弄)'
+        },
+        {
+          src: './1.mp3',
+          poster: './轨迹.jpg',
+          name: '轨迹',
+          artist: '周杰伦',
+          lyric: '歌词(bushi)',
+          sublyric: '副歌词(懒得弄)'
+        },
+        {
+          src: './2.mp3',
+          poster: './半岛铁盒.jpg',
+          name: '半岛铁盒',
+          artist: '周杰伦',
+          lyric: '歌词(bushi)',
+          sublyric: '副歌词(懒得弄)'
+        }
+      ]
+    })
+  </script>
+  <script>
+    let card = document.getElementsByClassName('card')[0]
+    card.onmouseover = function () {
+      app.style.display = 'block'
+    }
+    card.onmouseleave = function () {
+      app.style.display = 'none'
+    }
+  </script>
+</html>
